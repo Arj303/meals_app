@@ -50,23 +50,13 @@ class _HomePageState extends State<HomePage> {
         )
             : GridView.builder(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            crossAxisSpacing: 8.0,
-            mainAxisSpacing: 8.0,
+            crossAxisCount: 1,
+            crossAxisSpacing: 12.0,
+            mainAxisSpacing: 12.0,
           ),
           itemCount: categories.length,
           itemBuilder: (context, index) {
-            return GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) =>
-                        CategoryDetails(category: categories[index]),
-                  ),
-                );
-              },
-              child: Card(
+            return  Card(
                 elevation: 4.0,
                 shadowColor: Colors.black26,
                 surfaceTintColor: Colors.orange,
@@ -100,8 +90,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
-              ),
-            );
+              );
+
           },
         ),
       ),
